@@ -16,6 +16,3 @@ jai main.jai
 
 to build the game
 
-> [!NOTE]
->
-> you need to have raylib for this project to work, download the raylib zip file and extract it and keep its directory here
