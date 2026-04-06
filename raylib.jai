@@ -1,7 +1,7 @@
 #import "Math";
 
 libm :: #library,system,link_always "libm";
-ray :: #library "libraylib";
+ray :: #library "raylib-5.5_linux_amd64/lib/libraylib";
 
 InitWindow :: (width: s32, height: s32, title: *u8) #foreign ray;
 WindowShouldClose :: () -> bool #foreign ray;
