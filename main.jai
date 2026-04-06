@@ -1,8 +1,6 @@
 #import "Basic";
 #import "Raylib";
 
-libm :: #library,system,link_always "libm";
-
 #load "config.jai";
 
 BACKGROUND_COLOR :: Color.{r = 0x2B, g = 0x2B, b = 0x2B, a = 0xFF};
