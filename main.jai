@@ -24,9 +24,6 @@ main :: () {
       ToggleFullscreen();
     }
 
-    //key := GetKeyPressed();
-    //print("%\n", key);
-
     BeginDrawing();
     ClearBackground(BACKGROUND_COLOR);
     center := Vector2.{GetScreenWidth() / 2., GetScreenHeight() / 2.};
@@ -35,5 +32,4 @@ main :: () {
   }  
 
   CloseWindow();
-
 }
