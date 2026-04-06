@@ -1,5 +1,7 @@
 #import "Basic";
 
+libm :: #library,system,link_always "libm";
+
 #load "config.jai";
 #load "raylib.jai";
 
@@ -16,8 +18,8 @@ main :: () {
     }
 
     BeginDrawing();
-    ClearBackground(0x5A5A5A);
-    DrawText("raylib in jai", 190, 200, 20, 0xFFFFFFFF);
+    ClearBackground(.{r = 0xFF, a = 0xFF});
+    //DrawText("raylib in jai", 190, 200, 20, RAYWHITE);
     EndDrawing();
   }  
 
