@@ -14,14 +14,6 @@ build :: () {
     "raylib-5.5_linux_amd64/include/raylib.h",
     "raylib-5.5_linux_amd64/include/raymath.h");
 
-  generate_bindings(opts, "raylib.jai");
+  generate_bindings(opts, "module.jai");
 
-  w := compiler_create_workspace("Raylib");
-
-  options := get_build_options(w);
-  
-  options.output_executable_name = "main";
-  set_build_options(options, w);
-
-  add_build_file("main.jai", w);
 }
