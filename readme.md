@@ -16,3 +16,6 @@ jai main.jai
 
 to build the game
 
+> [!NOTE]
+>
+> make sure to download raylib and extract it to modules/Raylib/

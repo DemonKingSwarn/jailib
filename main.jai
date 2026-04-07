@@ -2,12 +2,12 @@
 #import "Raylib";
 
 #load "config.jai";
+#load "player.jai";
 
 BACKGROUND_COLOR :: Color.{r = 0x2B, g = 0x2B, b = 0x2B, a = 0xFF};
 FOREGROUND_COLOR :: Color.{r = 0xFF, g = 0x50, b = 0x50, a = 0xFF};
 
-main :: () {
- 
+main :: () { 
   SetTargetFPS(fps);
  
   InitWindow(width, height, title);
@@ -24,8 +24,9 @@ main :: () {
 
     BeginDrawing();
     ClearBackground(BACKGROUND_COLOR);
-    center := Vector2.{GetScreenWidth() / 2., GetScreenHeight() / 2.};
-    DrawCircleV(center, 100, FOREGROUND_COLOR);
+    // center := Vector2.{GetScreenWidth() / 2., GetScreenHeight() / 2.};
+    // DrawCircleV(center, 100, FOREGROUND_COLOR);
+    draw_player(); 
     EndDrawing();
   }  
 
