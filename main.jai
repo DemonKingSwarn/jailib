@@ -4,16 +4,30 @@
 #load "config.jai";
 #load "player.jai";
 
-BACKGROUND_COLOR :: Color.{r = 0x2B, g = 0x2B, b = 0x2B, a = 0xFF};
-FOREGROUND_COLOR :: Color.{r = 0xFF, g = 0x50, b = 0x50, a = 0xFF};
-
 main :: () { 
   SetTargetFPS(fps);
  
   InitWindow(width, height, title);
-  
+
+  anchor_position := Vector2.{width*0.5, height*0.25};
+  ball_position := Vector2.{width*0.25, height*0.5};
+  ball_velocity := Vector2.{100, 0};
+  gravity := Vector2.{0, 1000};
+
   while !WindowShouldClose() {
-   
+    dt := GetFrameTime();
+    
+    tension_force := anchor_position - ball_position;
+
+    ball_velocity += (gravity + tension_force) * dt;
+    new_ball_position := ball_position + ball_velocity * dt;
+    
+    if new_ball_position.y + radius > height {
+      ball_velocity.y *= -1;
+    } else {
+      ball_position = new_ball_position;
+    }
+
     if IsKeyDown(Q_Key) {
       CloseWindow();
     }
@@ -24,9 +38,9 @@ main :: () {
 
     BeginDrawing();
     ClearBackground(BACKGROUND_COLOR);
-    // center := Vector2.{GetScreenWidth() / 2., GetScreenHeight() / 2.};
-    // DrawCircleV(center, 100, FOREGROUND_COLOR);
-    draw_player(); 
+    DrawLineEx(anchor_position, ball_position, rope_thickness, ROPE_COLOR);
+    DrawCircleV(ball_position, radius, FOREGROUND_COLOR);
+    DrawCircleV(anchor_position, radius*0.25, ANCHOR_COLOR);
     EndDrawing();
   }  
 

@@ -13,7 +13,6 @@ build :: () {
   array_add(*opts.source_files, 
     "raylib-5.5_macos/include/raylib.h",
     "raylib-5.5_macos/include/raymath.h");
-
   generate_bindings(opts, "macos.jai");
 
 }
