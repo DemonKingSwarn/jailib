@@ -17,11 +17,8 @@ operator - :: inline (lhs: Vector2, rhs: Vector2) -> Vector2 {
 #if OS == .LINUX {
   libm :: #library,system,link_always "libm";
   #load "linux.jai";
-} else #if OS == .WINDOWS {
-  #load "windows.jai";
-  libm :: #library,system,link_always "libm";
-} else #if OS == .MACOS {
-  #load "macos.jai";
+} else {
+  #assert false, "this OS is not supported yet.";
 }
 
 
