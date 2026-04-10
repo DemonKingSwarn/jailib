@@ -1,5 +1,4 @@
 
-PLAYER_COLOR :: Color.{r = 0xFF, g = 0x50, b = 0x50, a = 0xFF};
 player :: "assets/square.png";
 
 position: Vector2;
@@ -12,8 +11,8 @@ speed: float = 250;
 
 
 player_init :: () {
-  position.x = cast(float)width/2;
-  position.y = cast(float)height/2;
+  position.x = CENTER.x;
+  position.y = CENTER.y;
   
   playerImg := LoadImage(player);
   
@@ -31,7 +30,7 @@ draw_player :: () {
     Rectangle.{position.x, position.y, player_texture.width * scale, player_texture.height * scale},
     origin, 
     rotation, 
-    PLAYER_COLOR);
+    LIGHTRED);
 }
 
 player_update :: (delta: float) {

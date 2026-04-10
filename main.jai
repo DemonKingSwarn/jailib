@@ -33,7 +33,7 @@ update :: (delta: float) {
   }
 
   BeginDrawing();
-  ClearBackground(BACKGROUND_COLOR);
+  ClearBackground(BLACK);
   defer EndDrawing();
 
   if DEBUG {
