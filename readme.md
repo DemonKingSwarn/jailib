@@ -1,4 +1,4 @@
-# jailib
+# Square Shoot Frenzy
 
 just a game being written using raylib and jai
 
