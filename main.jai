@@ -22,6 +22,7 @@ main :: () {
 start :: () {
   SetTargetFPS(fps);
   InitWindow(width, height, title);
+  HideCursor();
   player_init();
 }
 
