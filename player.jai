@@ -43,6 +43,6 @@ player_update :: (delta: float) {
   DrawText(TextFormat("position = %", position), 20, 30, 20, WHITE);
 
   if IsMouseButtonPressed(0) {
-  
+    // TODO: implementation of bullet fire 
   }
 }
