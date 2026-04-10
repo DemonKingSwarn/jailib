@@ -4,7 +4,7 @@
 Math :: #import "Math";
 
 #load "config.jai";
-#load "player.jai";
+#load "src/player.jai";
 
 main :: () {
   start();
