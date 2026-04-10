@@ -40,7 +40,9 @@ player_update :: (delta: float) {
   if IsKeyDown(A_Key) position.x -= speed * delta;   
   if IsKeyDown(D_Key) position.x += speed * delta;
 
-  DrawText(TextFormat("position = %", position), 20, 30, 20, WHITE);
+  if DEBUG {
+    DrawText(TextFormat("position = %", position), 20, 30, 20, WHITE);
+  }
 
   if IsMouseButtonPressed(0) {
     // TODO: implementation of bullet fire 

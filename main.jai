@@ -36,7 +36,9 @@ update :: (delta: float) {
   ClearBackground(BACKGROUND_COLOR);
   defer EndDrawing();
 
-  DrawText(TextFormat("fps = %", GetFPS()), 20, 10, 20, WHITE);
+  if DEBUG {
+    DrawText(TextFormat("fps = %", GetFPS()), 20, 10, 20, WHITE);
+  }
 
   draw_player();
 
