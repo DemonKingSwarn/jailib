@@ -5,6 +5,7 @@ Math :: #import "Math";
 
 #load "config.jai";
 #load "src/player.jai";
+#load "src/spawner.jai";
 
 main :: () {
   start();
@@ -15,6 +16,7 @@ main :: () {
   }
 
   UnloadTexture(player_texture);
+  UnloadTexture(enemy_texture);
   CloseWindow();
 }
 
@@ -24,6 +26,7 @@ start :: () {
   InitWindow(width, height, title);
   HideCursor();
   player_init();
+  init_spawner();
 }
 
 // called at every frame
@@ -42,6 +45,8 @@ update :: (delta: float) {
   }
 
   draw_player();
-
+  draw_spawner();
+  spawn(delta);
+  update_spawner(position, delta);
   player_update(delta);
 }
