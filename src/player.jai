@@ -16,7 +16,7 @@ player_init :: () {
   
   playerImg := LoadImage(player);
   
-  ImageFormat(*playerImg, 7);
+  ImageFormat(*playerImg, xx PixelFormat.PIXELFORMAT_UNCOMPRESSED_R8G8B8A8);
   player_texture = LoadTextureFromImage(playerImg);
   UnloadImage(playerImg);
 }
@@ -34,16 +34,16 @@ draw_player :: () {
 }
 
 player_update :: (delta: float) {
-  if IsKeyDown(W_Key) position.y -= speed * delta;   
-  if IsKeyDown(S_Key) position.y += speed * delta;   
-  if IsKeyDown(A_Key) position.x -= speed * delta;   
-  if IsKeyDown(D_Key) position.x += speed * delta;
+  if IsKeyDown(xx KeyboardKey.W) position.y -= speed * delta;   
+  if IsKeyDown(xx KeyboardKey.S) position.y += speed * delta;   
+  if IsKeyDown(xx KeyboardKey.A) position.x -= speed * delta;   
+  if IsKeyDown(xx KeyboardKey.D) position.x += speed * delta;
 
   if DEBUG {
     DrawText(TextFormat("position = %", position), 20, 30, 20, WHITE);
   }
 
-  if IsMouseButtonPressed(0) {
+  if IsMouseButtonPressed(xx MouseButton.MOUSE_BUTTON_LEFT) {
     // TODO: implementation of bullet fire 
   }
 }

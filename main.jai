@@ -28,7 +28,7 @@ start :: () {
 // called at every frame
 update :: (delta: float) {
 
-  if IsKeyDown(Q_Key) {
+  if IsKeyDown(xx KeyboardKey.Q) {
     CloseWindow();
   }
 

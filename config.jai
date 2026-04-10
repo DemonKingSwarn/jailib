@@ -18,12 +18,3 @@ LIGHTRED :: Color.{r = 0xFF, g = 0x50, b = 0x50, a = 0xFF};
 WHITE :: Color.{r = 0xFF, g = 0xFF, b = 0xFF, a = 0xFF};
 
 DEBUG :: true;
-
-Q_Key :: 81;
-W_Key :: 87;
-A_Key :: 65;
-S_Key :: 83;
-D_Key :: 68;
-
-MOUSE_LEFT :: 0;
-MOUSE_RIGHT :: 1;
