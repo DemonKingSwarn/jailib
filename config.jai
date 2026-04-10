@@ -6,8 +6,9 @@ height :: 9*window_factor;
 
 fps :: 60;
 
-BACKGROUND_COLOR :: Color.{r = 0x2B, g = 0x2B, b = 0x2B, a = 0xFF};
+BACKGROUND_COLOR :: Color.{r = 0x00, g = 0x00, b = 0x00, a = 0xFF};
 FOREGROUND_COLOR :: Color.{r = 0xFF, g = 0x50, b = 0x50, a = 0xFF};
+WHITE :: Color.{r = 0xFF, g = 0xFF, b = 0xFF, a = 0xFF};
 
 F11 :: 300; // F11
 Q_Key :: 81;

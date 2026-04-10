@@ -38,5 +38,11 @@ player_update :: (delta: float) {
   if IsKeyDown(W_Key) position.y -= speed * delta;   
   if IsKeyDown(S_Key) position.y += speed * delta;   
   if IsKeyDown(A_Key) position.x -= speed * delta;   
-  if IsKeyDown(D_Key) position.x += speed * delta;   
+  if IsKeyDown(D_Key) position.x += speed * delta;
+
+  DrawText(TextFormat("position = %", position), 20, 30, 20, WHITE);
+
+  if IsMouseButtonPressed(0) {
+  
+  }
 }
