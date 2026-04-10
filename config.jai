@@ -1,17 +1,17 @@
-title :: "ray window";
+title :: "Hello, Sailor";
 
-width :: 1280;
-height :: 720;
+window_factor :: 100;
+width :: 16*window_factor;
+height :: 9*window_factor;
 
 fps :: 60;
 
 BACKGROUND_COLOR :: Color.{r = 0x2B, g = 0x2B, b = 0x2B, a = 0xFF};
 FOREGROUND_COLOR :: Color.{r = 0xFF, g = 0x50, b = 0x50, a = 0xFF};
-ANCHOR_COLOR :: Color.{r = 0x50, g = 0x50, b = 0xFF, a = 0xFF};
-ROPE_COLOR :: Color.{r = 0xFF, g = 0xFF, b = 0xFF, a = 0xFF};
 
-radius :: 50;
-rope_thickness :: 10;
-
-FullscreenKey :: 300; // F11
+F11 :: 300; // F11
 Q_Key :: 81;
+W_Key :: 87;
+A_Key :: 65;
+S_Key :: 83;
+D_Key :: 68;
