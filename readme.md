@@ -11,7 +11,8 @@ Version: beta 0.2.028, built on 9 April 2026.
 just run:
 
 ```sh
-jai main.jai
+jai main.jai -o -exe square_shoot_frenzy
+./square_shoot_frenzy
 ```
 
 to build the game
