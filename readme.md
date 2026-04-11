@@ -1,5 +1,7 @@
 # Square Shoot Frenzy
 
+![](./ss.png)
+
 just a game being written using raylib and jai
 
 to build the game you must have Jai version:
@@ -20,3 +22,5 @@ to build the game
 > [!NOTE]
 >
 > make sure to download raylib and extract it to modules/Raylib/
+> raylib version is 5.5
+> currently only linux is supported, would appreciate for other os' PR :D
